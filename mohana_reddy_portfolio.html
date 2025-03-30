@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohana Reddy - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #f5f5f5;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #2c3e50;
+            color: #fff;
+            padding: 15px 20px;
+            z-index: 100;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #27ae60;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ecf0f1;
+        }
+
+        .contact-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .contact-buttons .btn-animated {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-buttons .btn-animated:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
+        }
+
+        /* Profile Picture */
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid #27ae60; /* Adding a round border */
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Background Animation */
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        /* Resume Button Container */
+        .resume-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .resume-container .btn-animated {
+            margin-top: 10px;
+        }
+
+        /* Card Styling */
+        .card {
+            margin-bottom: 20px;
+        }
+
+        /* Scroll-to-top button */
+        #scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        #scroll-to-top:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <canvas id="nokey"></canvas>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero animate__animated animate__fadeIn">
+        <img src="C:\Users\mohana.reddy\Desktop\Yeddula Mohana Reddy Portfolio\Mohana Reddy PassPhoto.jpg" alt="Yeddula Mohana Reddy">
+        <h1>Yeddula Mohana Reddy</h1>
+        <p>Security Consultant | Penetration Tester | Security Researcher</p>
+        <div class="contact-buttons">
+            <a href="https://linkedin.com/in/yeddula-mohana-reddy/" target="_blank" class="btn btn-primary btn-animated">Hire Me</a>
+            <a href="tel:+919092923242" class="btn btn-success btn-animated">Call Me</a>
+            <a href="mailto:yeddulamohanareddy321@gmail.com" class="btn btn-danger btn-animated">Mail Me</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container section animate__animated animate__fadeInUp">
+        <h2 class="text-center">About Me</h2>
+        <p class="text-center">I am a Certified and experienced Security Consultant with expertise in penetration testing, vulnerability assessments, and security audits. I am proficient in industry-standard tools and methodologies, including OWASP Top 10, SANS Top 25, and NIST security standards. 
+        I have delivered comprehensive security solutions for 50+ clients, mitigating critical vulnerabilities such as Remote Code Execution, SQL Injection, and Account Takeover.
+        My experience also includes enhancing security protocols and integrating security into the software development lifecycle (SDLC). 
+        Over the years, I have conducted thorough assessments of over 50 systems and infrastructures against emerging cybersecurity threats, identifying vulnerabilities that, if exploited, could lead to severe data breaches affecting thousands of users.</p>
+    </section>
+
+    <!-- Resume Button -->
+    <div class="resume-container">
+        <a href="C:\Users\mohana.reddy\Desktop\Yeddula Mohana Reddy Portfolio\YEDDULA MOHANA REDDY_Security_Consultant.pdf" target="_blank" class="btn btn-info btn-animated">View Resume</a>
+    </div>
+
+    <!-- Education Section -->
+    <section id="education" class="container section">
+        <h2 class="text-center">Education</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h4>Sree Vidyanikethan Engineering College</h4>
+                    <p>Mechani al Engineering</p>
+                    <ul>
+                        <li>2016 - 2020</li>
+                        <li>7.5 CGPA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h4>Narayana Junior College</h4>
+                    <p>M.P.C</p>
+                    <ul>
+                        <li>2014 - 2016</li>
+                        <li>89.8%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="container section">
+        <h2 class="text-center">Experience</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h4>Isecurion Technology & Consulting</h4>
+<p><strong>Role:</strong> Security Consultant (May 2022 - Present)</p>
+<ul>
+    <li>Performed over 50 comprehensive vulnerability assessments and penetration tests, both manual and automated, targeting web applications, mobile applications, APIs, and thick-client systems to identify and mitigate critical security risks.</li>
+    <li>Delivered detailed assessment reports adhering to OWASP Top 10 and SANS Top 25 security standards, ensuring compliance with industry best practices.</li>
+    <li>Identified and resolved 15+ high-severity vulnerabilities, including Remote Code Execution and Business Logic flaws, across diverse sectors such as Fin-Tech, Healthcare, and E-Commerce, significantly enhancing clients' security postures.</li>
+    <li>Conducted comprehensive risk assessments and security audits across 15 departments, producing detailed reports that identified 20 critical vulnerabilities and provided actionable recommendations, leading to a 40% reduction in security incidents.</li>
+    <li>Enhanced the Software Development Life Cycle (SDLC) by collaborating with development and IT teams to integrate robust security measures, ensuring secure coding practices and reducing vulnerabilities early in development.</li>
+    <li>Leveraged a suite of advanced security tools, including Burp Suite Pro, Nessus, and SQLMap, to effectively identify, analyze, and remediate vulnerabilities across various applications and systems, enhancing overall threat detection and mitigation capabilities.</li>
+ <li>Deployed Trend Micro XDR to integrate and correlate threat data across email, endpoints, servers, cloud workloads, and networks, significantly enhancing threat detection, investigation, and response times for the organization.</li>
+ <li>Implemented ManageEngine’s suite of IT management solutions to streamline the monitoring and management of networks, servers, and endpoints, improving operational efficiency and security posture across the organization.
+</li>
+</ul>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h4>Gateway Techno Solutions</h4>
+<p><strong>Role:</strong> IT Audit & Compliance Intern (Jan 2022 - March 2022)</p>
+<ul>
+    <li>Performed network vulnerability assessments using Nessus, Nmap, and Metasploit, significantly enhancing infrastructure security by identifying and mitigating critical vulnerabilities.</li>
+    <li>Configured routers and switches to improve network resilience in small office environments, ensuring better security and operational efficiency.</li>
+    <li>Created detailed network configuration documentation to ensure adherence to security best practices, facilitating compliance and reducing potential risks.</li>
+    <li>Assisted in resolving hardware and software issues, contributing to improved organizational security by addressing vulnerabilities and ensuring system stability.</li>
+</ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="container section">
+        <h2 class="text-center">Tools</h2>
+<ul class="list-group">
+    <li class="list-group-item" style="display: flex;">
+        <strong style="flex-shrink: 0; width: 200px; border-right: 2px solid #000; padding-right: 10px;">Burp Suite Professional</strong> 
+        <span style="margin-left: 10px;">A comprehensive web application security testing toolkit used for identifying vulnerabilities and performing security assessments on websites and web applications.</span>
+    </li>
+    <li class="list-group-item" style="display: flex;">
+        <strong style="flex-shrink: 0; width: 200px; border-right: 2px solid #000; padding-right: 10px;">Acunetix</strong> 
+        <span style="margin-left: 10px;">A web application security scanner designed to automatically detect and identify vulnerabilities like SQL Injection, XSS, and other web-related threats.</span>
+    </li>
+    <li class="list-group-item" style="display: flex;">
+        <strong style="flex-shrink: 0; width: 200px; border-right: 2px solid #000; padding-right: 10px;">Nessus Professional</strong> 
+        <span style="margin-left: 10px;">A powerful vulnerability scanning tool that helps identify and manage vulnerabilities in networks, systems, and applications to ensure security.</span>
+    </li>
+    <li class="list-group-item" style="display: flex;">
+        <strong style="flex-shrink: 0; width: 200px; border-right: 2px solid #000; padding-right: 10px;">Manage Engine</strong> 
+        <span style="margin-left: 10px;">A suite of IT management and security solutions, including tools for network monitoring, server management, IT asset tracking, and endpoint protection.</span>
+    </li>
+    <li class="list-group-item" style="display: flex;">
+        <strong style="flex-shrink: 0; width: 200px; border-right: 2px solid #000; padding-right: 10px;">Trend Micro</strong> 
+        <span style="margin-left: 10px;">A cybersecurity platform offering protection against a wide range of threats, including malware, ransomware, and other cyber-attacks through endpoint and network security solutions.</span>
+    </li>
+    <li class="list-group-item" style="display: flex;">
+        <strong style="flex-shrink: 0; width: 200px; border-right: 2px solid #000; padding-right: 10px;">Nuclei</strong> 
+        <span style="margin-left: 10px;">A fast and flexible vulnerability scanner that helps identify security flaws in web applications, networks, and services by using customizable templates.</span>
+    </li>
+    <li class="list-group-item" style="display: flex;">
+        <strong style="flex-shrink: 0; width: 200px; border-right: 2px solid #000; padding-right: 10px;">SSLScan</strong> 
+        <span style="margin-left: 10px;">A command-line tool for scanning SSL/TLS services, providing detailed information on the SSL/TLS configurations and vulnerabilities of web servers.</span>
+    </li>
+    <li class="list-group-item" style="display: flex;">
+        <strong style="flex-shrink: 0; width: 200px; border-right: 2px solid #000; padding-right: 10px;">SQLMap</strong> 
+        <span style="margin-left: 10px;">An open-source penetration testing tool used to automate the process of detecting and exploiting SQL injection flaws in web applications.</span>
+    </li>
+    <li class="list-group-item" style="display: flex;">
+        <strong style="flex-shrink: 0; width: 200px; border-right: 2px solid #000; padding-right: 10px;">Kali Linux Tools</strong> 
+        <span style="margin-left: 10px;">A comprehensive set of penetration testing and security auditing tools included in Kali Linux, widely used for security assessments, vulnerability testing, and exploitation.</span>
+    </li>
+    <li class="list-group-item" style="display: flex;">
+        <strong style="flex-shrink: 0; width: 200px; border-right: 2px solid #000; padding-right: 10px;">Nessus Professional</strong> 
+        <span style="margin-left: 10px;">A powerful vulnerability scanning tool that helps identify and manage vulnerabilities in networks, systems, and applications to ensure security.</span>
+    </li>
+    <li class="list-group-item" style="display: flex;">
+        <strong style="flex-shrink: 0; width: 200px; border-right: 2px solid #000; padding-right: 10px;">Metasploit</strong> 
+        <span style="margin-left: 10px;">A framework for developing and executing exploit code against remote target systems, used for penetration testing and vulnerability validation.</span>
+    </li>
+</ul>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="container section">
+        <h2 class="text-center">Certifications</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Elearn Junior Penetration Tester (eJPT)</li>
+            <li class="list-group-item">Certified AppSec Practitioner (The SecOps Group)</li>
+            <li class="list-group-item">PrivacyOps Certification (Securiti)</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>yeddulamohanareddy321@gmail.com | +91 9666764419 | https://linkedin.com/in/yeddula-mohana-reddy/</p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" onclick="window.scrollTo(0, 0);">.↑.</button>
+
+    <!-- JavaScript for Particle Animation -->
+    <script>
+        var canvas = document.getElementById('nokey'),
+            ctx = canvas.getContext('2d');
+
+        function initCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        var balls = [],
+            BALL_NUM = 30,
+            R = 2,
+            dis_limit = 260;
+
+        function getRandomSpeed() {
+            return [(Math.random() * 2 - 1), (Math.random() * 2 - 1)];
+        }
+
+        function getRandomBall() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: getRandomSpeed()[0],
+                vy: getRandomSpeed()[1],
+                r: R
+            };
+        }
+
+        function renderBalls() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'rgba(207, 255, 4, 1)';
+
+            balls.forEach(b => {
+                ctx.beginPath();
+                ctx.arc(b.x, b.y, R, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            renderLines();
+        }
+
+        function renderLines() {
+            ctx.strokeStyle = 'rgba(150, 150, 150, 0.5)';
+            ctx.lineWidth = 0.8;
+
+            for (let i = 0; i < balls.length; i++) {
+                for (let j = i + 1; j < balls.length; j++) {
+                    let dx = balls[i].x - balls[j].x,
+                        dy = balls[i].y - balls[j].y,
+                        distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < dis_limit) {
+                        ctx.beginPath();
+                        ctx.moveTo(balls[i].x, balls[i].y);
+                        ctx.lineTo(balls[j].x, balls[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function updateBalls() {
+            balls.forEach(b => {
+                b.x += b.vx;
+                b.y += b.vy;
+
+                if (b.x < 0 || b.x > canvas.width) b.vx *= -1;
+                if (b.y < 0 || b.y > canvas.height) b.vy *= -1;
+            });
+
+            requestAnimationFrame(renderBalls);
+        }
+
+        function initBalls(num) {
+            for (let i = 0; i < num; i++) {
+                balls.push(getRandomBall());
+            }
+        }
+
+        function startAnimation() {
+            initCanvas();
+            initBalls(BALL_NUM);
+            renderBalls();
+            setInterval(updateBalls, 30);
+        }
+
+        window.addEventListener('resize', initCanvas);
+        startAnimation();
+    </script>
+</body>
+
+</html>
